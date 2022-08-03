@@ -1,0 +1,35 @@
+
+<div class="center">
+  <!-- <form class="example-form">
+    <mat-form-field [style.width.%]="50" >
+      <mat-label>Name</mat-label>
+      <input type="text" matInput 
+             placeholder="Name">
+      <mat-hint>Errors appear instantly!</mat-hint>   
+    </mat-form-field>   
+  </form> -->
+  <form  #userName="ngForm" (ngSubmit)="onClickSubmit(userName.value)">
+    <mat-form-field [style.width.%]="50" >
+      <mat-label>Name</mat-label>
+      <input type="text" matInput 
+      name="username" placeholder="username" ngModel>
+      <!-- <mat-hint *ngIf="">Errors appear instantly!</mat-hint>-->
+    </mat-form-field> 
+    <button mat-button color="primary" type="submit" value="submit">Submit</button>
+  </form>
+  <!-- <form #userName="ngForm" (ngSubmit)="onClickSubmit(userName.value)"> 
+    <input type="text" name="username" placeholder="username" ngModel> 
+    <br/> 
+    <br/> 
+    <input type="submit" value="submit"> 
+ </form> -->
+
+  <!-- <div class="m-t-40">
+    Select Item
+  <mat-select  
+    placeholder="Item" 
+    [(ngModel)]="selectedValue" name="item">
+   <mat-option *ngFor="let option of options" [value]="option">{{option.label}}</mat-option>
+</mat-select>
+</div> -->
+</div>
